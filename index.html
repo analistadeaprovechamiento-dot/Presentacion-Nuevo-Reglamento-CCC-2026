@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap');
+    :root { --bio-green: #3A7A35; --bio-slate: #1E293B; }
+    
+    body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: #F8FAFC; color: var(--bio-slate); }
+    .sidebar { background: var(--bio-green); width: 70px; height: 100vh; position: fixed; left: 0; top: 0; z-index: 1000; }
+    .main-content { margin-left: 70px; padding: 40px; }
+    
+    .brand-header { border-bottom: 3px solid var(--bio-green); padding-bottom: 1.5rem; margin-bottom: 2rem; }
+    .section-card { background: white; border-radius: 16px; padding: 24px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1); border: 1px solid #E2E8F0; margin-bottom: 2rem; }
+    
+    .kpi-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1.5rem; margin-bottom: 2rem; }
+    .kpi-card { background: white; padding: 20px; border-radius: 12px; border-left: 5px solid var(--bio-green); box-shadow: 0 2px 4px rgba(0,0,0,0.05); }
+    
+    table { width: 100%; border-collapse: collapse; font-size: 13px; }
+    th { background: #F1F5F9; color: #475569; font-weight: 800; text-transform: uppercase; padding: 12px; text-align: left; border-bottom: 2px solid #E2E8F0; }
+    td { padding: 12px; border-bottom: 1px solid #F1F5F9; vertical-align: top; }
+    
+    .tag-added { background: #DCFCE7; color: #166534; padding: 2px 8px; border-radius: 4px; font-weight: 700; font-size: 11px; }
+    .tag-modified { background: #FEF9C3; color: #854d0e; padding: 2px 8px; border-radius: 4px; font-weight: 700; font-size: 11px; }
+    .tag-removed { background: #FEE2E2; color: #991b1b; padding: 2px 8px; border-radius: 4px; font-weight: 700; font-size: 11px; }
+
+    .timeline-step { position: relative; padding-left: 30px; margin-bottom: 20px; border-left: 2px solid #E2E8F0; }
+    .timeline-step::before { content: ''; position: absolute; left: -7px; top: 0; width: 12px; height: 12px; border-radius: 50%; background: var(--bio-green); }
+  </style>
+</head>
+<body>
+
+  <aside class="sidebar flex flex-col items-center py-6">
+    <div class="bg-white p-2 rounded-xl mb-8">
+      <span class="material-icons text-green-700">analytics</span>
+    </div>
+    <span class="material-icons text-white/50 mb-6">description</span>
+    <span class="material-icons text-white/50">gavel</span>
+  </aside>
+
+  <main class="main-content">
+    <header class="brand-header flex justify-between items-end">
+      <div>
+        <h1 class="text-4xl font-extrabold tracking-tight">Bioagrícola del Llano S.A. E.S.P. BIC</h1>
+        <p class="text-slate-500 font-bold uppercase tracking-widest text-sm mt-2">Informe Técnico: Transición Normativa Reglamento CRA 1011 de 2025</p>
+      </div>
+      <div class="text-right">
+        <span class="text-xs font-black text-slate-400 uppercase">Versión 2.0 - 2026</span>
+      </div>
+    </header>
+
+    <div class="kpi-grid">
+      <div class="kpi-card">
+        <p class="text-xs font-bold text-slate-400 uppercase mb-1">Base Regulatoria</p>
+        <p class="text-xl font-extrabold">Res. CRA 943 / 2021</p>
+        <p class="text-[10px] text-green-600 font-bold mt-2">Sincronización Normativa Completa [cite: 10, 143]</p>
+      </div>
+      <div class="kpi-card">
+        <p class="text-xs font-bold text-slate-400 uppercase mb-1">Estatus del Acta</p>
+        <p class="text-xl font-extrabold">Mérito Ejecutivo</p>
+        <p class="text-[10px] text-blue-600 font-bold mt-2">Exigibilidad Judicial Directa </p>
+      </div>
+      <div class="kpi-card">
+        <p class="text-xs font-bold text-slate-400 uppercase mb-1">Garantía Financiera</p>
+        <p class="text-xl font-extrabold">Interés de Mora 1.5x</p>
+        <p class="text-[10px] text-red-600 font-bold mt-2">Protección de Flujo de Caja [cite: 410]</p>
+      </div>
+    </div>
+
+    <section class="section-card">
+      <div class="flex items-center mb-6">
+        <span class="material-icons mr-2 text-green-600">compare_arrows</span>
+        <h2 class="text-xl font-black uppercase tracking-tight text-slate-700">Matriz Comparativa de Ajustes Reglamentarios</h2>
+      </div>
+      
+      <table>
+        <thead>
+          <tr>
+            <th class="w-1/4">Aspecto / Cláusula</th>
+            <th class="w-1/4">Reglamento Anterior (BIO)</th>
+            <th class="w-1/4">Nueva Versión (CRA 1011)</th>
+            <th class="w-1/4">Análisis del Cambio</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="font-bold">Marco Normativo y Objeto</td>
+            <td class="text-slate-500 italic">Enfoque en Decretos 596 y 1077[cite: 483, 487].</td>
+            <td>Inclusión de Ley 142 de 1994 y órdenes de la Corte Constitucional[cite: 9, 10].</td>
+            <td><span class="tag-added">Añadido</span> Ampliación del objeto a recuperación de cartera y devoluciones[cite: 9].</td>
+          </tr>
+          <tr>
+            <td class="font-bold">Definiciones Jurídicas</td>
+            <td class="text-slate-500 italic">35 definiciones operativas (DINC, PGIRS)[cite: 539, 542].</td>
+            <td>26 definiciones con enfoque en "Criterios Diferenciales" y "Regularización"[cite: 33, 53].</td>
+            <td><span class="tag-removed">Eliminado</span> Redundancias operativas.<br><span class="tag-added">Añadido</span> Protección a recicladores de oficio[cite: 38].</td>
+          </tr>
+          <tr>
+            <td class="font-bold">Régimen de Prohibiciones</td>
+            <td class="text-slate-500 italic">No tipificado explícitamente.</td>
+            <td>Artículo 6: Prohibición de conductas unilaterales que afecten el equilibrio[cite: 190, 193].</td>
+            <td><span class="tag-added">Añadido</span> Estándar de debida diligencia y debido proceso operativo[cite: 190].</td>
+          </tr>
+          <tr>
+            <td class="font-bold">Gestión de Informes</td>
+            <td class="text-slate-500 italic">Informe 15 días posteriores al traslado[cite: 796].</td>
+            <td>Remisión 6 días hábiles previos al Comité. Hoja de cálculo editable[cite: 198, 200].</td>
+            <td><span class="tag-modified">Modificado</span> Transparencia proactiva antes de la conciliación.</td>
+          </tr>
+          <tr>
+            <td class="font-bold">Resolución de Conflictos</td>
+            <td class="text-slate-500 italic">Consulta genérica a SSPD / CRA[cite: 860].</td>
+            <td>Sujeción formal a Mecanismos Alternativos (MASC) - Ley 2220 de 2022[cite: 454].</td>
+            <td><span class="tag-added">Añadido</span> Blindaje jurídico para dirimir diferencias de forma técnica[cite: 454].</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+      <section class="section-card">
+        <h3 class="text-sm font-black uppercase text-slate-500 mb-6 flex items-center">
+          <span class="material-icons text-xs mr-2">verified_user</span>Secretaría Técnica e Imparcialidad
+        </h3>
+        <div class="timeline-step">
+          <p class="font-bold text-sm">Separación Estricta de Roles</p>
+          <p class="text-xs text-slate-500">Si BIOAGRICOLA es prestador, debe asignar personas distintas para la Secretaría y la representación[cite: 377].</p>
+        </div>
+        <div class="timeline-step">
+          <p class="font-bold text-sm">Función Operativa</p>
+          <p class="text-xs text-slate-500">Actuaciones limitadas a logística y documentación sin voto en decisiones[cite: 378].</p>
+        </div>
+        <div class="timeline-step">
+          <p class="font-bold text-sm">Garantía de Quórum</p>
+          <p class="text-xs text-slate-500">Prohibición de negativa al desarrollo del Comité por falta de una contraparte[cite: 343].</p>
+        </div>
+      </section>
+
+      <section class="section-card">
+        <h3 class="text-sm font-black uppercase text-slate-500 mb-6 flex items-center">
+          <span class="material-icons text-xs mr-2">account_balance</span>Efectividad Financiera
+        </h3>
+        <div class="bg-slate-50 p-4 rounded-xl border border-slate-200">
+          <p class="text-[10px] font-black text-slate-400 uppercase mb-2">Penalidad por Incumplimiento de Traslado</p>
+          <div class="flex justify-between items-center">
+            <span class="text-xs font-bold text-slate-700">Tasa Moratoria:</span>
+            <span class="text-sm font-black text-red-600">1.5x Interés Bancario Corriente</span>
+          </div>
+          <div class="h-px bg-slate-200 my-3"></div>
+          <p class="text-[10px] leading-relaxed text-slate-500 italic">
+            "Los intereses de mora se causarán mensualmente sobre el saldo incumplido en los tiempos establecidos por el Decreto 1077 de 2015"[cite: 408, 410].
+          </p>
+        </div>
+      </section>
+    </div>
+
+    <div class="bg-slate-800 text-white p-8 rounded-2xl mt-8">
+      <div class="flex items-start">
+        <span class="material-icons text-green-400 mr-4 text-3xl">policy</span>
+        <div>
+          <h3 class="text-lg font-black uppercase tracking-tight">Dictamen de Transición</h3>
+          <p class="text-slate-400 text-xs mt-2 leading-relaxed">
+            La adopción del <strong>Reglamento CRA 1011</strong> representa la evolución hacia un estándar de **Gobernanza de Servicios Públicos** basado en la transparencia algorítmica (uso de hojas de cálculo CRA) y la seguridad jurídica (mérito ejecutivo de actas)[cite: 227, 374]. Se elimina la discrecionalidad procedimental, asegurando que el traslado de recursos y la atención de devoluciones a usuarios sigan un protocolo auditable por la Superintendencia de Servicios Públicos Domiciliarios[cite: 142, 344].
+          </p>
+        </div>
+      </div>
+    </div>
+  </main>
+</body>
+</html>
